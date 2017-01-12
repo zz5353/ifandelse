@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js条件语句</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+    	.container{
+    		width: 350px;
+    		height: 400px;
+    		border: 1px solid #aaa;
+    		margin: 100px auto;
+    		padding: 150px 60px;
+    		background:#eee;
+    		border-radius: 5px;
+    	}
+    	.container #score{
+    		width: 50px;
+    	}
+    </style>
+    <script>
+    function rank() {
+        var score = parseInt(document.getElementById("score").value);
+
+        if (score >= 90 && score <= 100) {
+            document.getElementById("grade").innerText = 1;
+        } else if (score >= 80 && score < 90) {
+            document.getElementById("grade").innerText = 2;
+        } else if (score >= 70 && score < 80) {
+            document.getElementById("grade").innerText = 3;
+        } else if (score >= 60 && score < 70) {
+            document.getElementById("grade").innerText = 4;
+        } else if (score >= 50 && score < 60) {
+            document.getElementById("grade").innerText = 5;
+        } else if (score >= 40 && score < 50) {
+            document.getElementById("grade").innerText = 6;
+        } else if (score >= 30 && score < 40) {
+            document.getElementById("grade").innerText = 7;
+        } else if (score >= 20 && score < 30) {
+            document.getElementById("grade").innerText = 8;
+        } else if (score >= 10 && score < 20) {
+            document.getElementById("grade").innerText = 9;
+        } else if (score >= 0 && score < 10) {
+            document.getElementById("grade").innerText = 10;
+        } else {
+            alert("请输入正确的学生成绩（0-100）！")
+        }
+    }
+    </script>
+</head>
+
+<body>
+	<div class="container">
+		 请输入学生成绩
+	    <input type="text" id="score" placeholder="0-100">
+	    <button onclick="rank()">评等级</button>
+	    <br><br>
+	    该生为<span id="grade">_</span>等生
+	</div>   
+</body>
+
+</html>
